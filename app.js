@@ -7,7 +7,7 @@ const DATABASE_URL=process.env.DATABASE_URL || 'mongodb://localhost:27017/MERN'
 const PORT=process.env.PORT || 9000
 
 const Note=require('./models/notes.js')
-
+const validate=require('./validation/validate.js')
 const getNote=require('./middleware/getNote.js')
 
 app.use(express.json())
@@ -38,6 +38,7 @@ app.get('/note/:id',getNote, async (req,res)=>{
 
 
 app.post("/note" ,async (req, res) => {
+  validate(req,res)
     const note=new Note({
         noteTitle:req.body.noteTitle,
         noteBody:req.body.noteBody
@@ -53,6 +54,7 @@ app.post("/note" ,async (req, res) => {
   })
 
 app.patch('/note/:id',getNote,async (req,res)=>{
+  validate(req,res)
   if(req.body.noteTitle !=null){
     res.note.noteTitle=req.body.noteTitle
   }
