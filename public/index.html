@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note taking app</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer ></script>
+   
+
+</head>
+<body>
+    <h2 class="title">Note taking app</h2>
+    <div class="container">
+        <div id="form-container">
+            <div class="form" id="create-form">
+                <form id="post-form">
+                    <label>Create Note</label><br>
+                    <input type="text" id="post-note-Title" placeholder="Enter Note Title">
+                    <input type="text" id="post-note-Body" placeholder="Enter note body">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="form" id="edit-form">
+                <form id="put-form" >
+                    <label>Edit Note</label><br>
+                    <input type="text" id="put-noteID" placeholder="Enter Note ID">
+                    <input type="text" id="put-noteTitle" placeholder="Enter Note Title">
+                    <input type="text" id="put-noteBody" placeholder="Enter Note Body">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="form" id="delete-form">
+                <form id="del-form" >
+                    <label>Delete Note</label><br>
+                    <input type="text" id="delete-noteID" placeholder="Enter Note ID">
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+
+        </div>
+        <div  id="result-container">
+            <div id="search-form">
+                <form id="get-form" >
+                    <label >Search Note</label><br>
+                    <input type="text" id="get-noteID" placeholder="Enter Note Title ( leave blank for all notes)">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+            <div >
+                <h3>Result(s)</h3>
+                <div id="results">
+
+                </div>
+            </div>
+        </div>
+            
+        
+    </div>
+    
+</body>
+</html>

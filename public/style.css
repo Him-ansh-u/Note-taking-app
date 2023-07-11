@@ -1,0 +1,73 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-color: #303030;
+  color: #fff;
+}
+.title{
+  display: flex;
+  height: 9vh;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1.5px solid #393939;
+
+  font-size: 2.4em;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  height: 91vh;
+}
+#form-container{
+  width: 50vw;
+  height: 100%;
+  padding: 10px;
+}
+#result-container{
+  border-left:2px solid #393939;
+  width: 50vw;
+  height: 100%;
+}
+#search-form{
+  height: 110px;
+  border: 5px groove #393939;
+  padding: 10px;
+}
+input{
+  height: 30px;
+  width: 100%;
+  margin-top: 3px;
+  padding-left: 5px;
+  background-color: #393939;
+  color: #fff;
+}
+
+div{
+  font-size: 20px;
+}
+.form{
+  height: 200px;
+  border: 5px groove #393939;
+  padding: 3px;
+}
+.form label{
+  display: flex;
+  justify-content: center;
+}
+h3{
+  display: flex;
+  justify-content: center ;
+  border-top:2px solid #393939;
+}
+
+
+#delete-form{
+  height: 130px;
+}
+#create-form{
+  height: 160px;
+}
